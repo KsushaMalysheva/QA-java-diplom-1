@@ -8,6 +8,13 @@ import java.util.Random;
 import static org.junit.Assert.assertEquals;
 
 public class BunTest {
+    Faker faker = Faker.instance();
+    Random random = new Random();
+
+    final private String name = faker.name().toString();
+    final private float price = random.nextFloat();
+
+    Bun bun = new Bun(name, price);
 
     @Test
     public void getNameReturnsCorrectName() {
@@ -24,14 +31,6 @@ public class BunTest {
         float actualPrice = bun.getPrice();
         assertEquals(expectedPrice, actualPrice, 2);
     }
-
-    Faker faker = Faker.instance();
-    Random random = new Random();
-
-    final private String name = faker.name().toString();
-    final private float price = random.nextFloat();
-
-    Bun bun = new Bun(name, price);
 
     @Test
     public void getNameCheck() {
