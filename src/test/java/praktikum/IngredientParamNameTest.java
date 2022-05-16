@@ -23,6 +23,7 @@ public class IngredientParamNameTest {
                 {database.availableIngredients().get(0).getName(), "hot sauce"},
                 {"some 125 name", "some 125 name"},
                 {null, null},
+                {" ", " "},
         };
     }
 
@@ -30,6 +31,5 @@ public class IngredientParamNameTest {
     public void shouldGetAnIngredientName() {
         String actual = new Ingredient(FILLING, name, 100).getName();
         assertEquals("Имя ингредиента соответствует ожидаемому",expected, actual);
-
     }
 }

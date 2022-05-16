@@ -23,7 +23,10 @@ public class IngredientParamPriseTest {
                 {400, 400},
                 {1122525224111200.50f, 1122525224111200.50f},
                 {295522.12345f, 295522.12345f},
-                {0, 0}
+                {0, 0},
+                {-3.4E-38F, -3.4E-38F},
+                {-1122525224111200.50f, -1122525224111200.50f},
+
         };
     }
 
@@ -31,7 +34,6 @@ public class IngredientParamPriseTest {
     public void shouldGetIngredientPrice() {
         float actual = new Ingredient(SAUCE, "имя", price).getPrice();
         assertEquals("Цена ингредиента соответствует ожидаемой", expected, actual, 0);
-
     }
 }
 

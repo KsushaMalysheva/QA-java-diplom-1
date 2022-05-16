@@ -17,6 +17,7 @@ import static org.mockito.Mockito.when;
 public class BurgerTest {
 
     Burger burger = new Burger();
+
     @Mock
     Bun bun;
     Ingredient ingredient = mock(Ingredient.class);
@@ -48,6 +49,7 @@ public class BurgerTest {
     public void burgerDeleteIngredient() {
         Mockito.when(bun.getPrice()).thenReturn(100f);
         Mockito.when(ingredient.getPrice()).thenReturn(10f);
+        Mockito.when(ingredient2.getPrice()).thenReturn(50f);
         Mockito.when(ingredient3.getPrice()).thenReturn(100f);
         burger.addIngredient(ingredient);
         burger.addIngredient(ingredient2);
